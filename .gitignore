@@ -1,0 +1,8 @@
+*__pycache__
+*.ipynb_checkpoints/
+data/
+experiments/pretrained_model
+experiments/**/ckpt-*
+experiments/**/checkpoint
+experiments/**/train
+experiments/**/eval
