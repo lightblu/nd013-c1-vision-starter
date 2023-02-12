@@ -1,3 +1,8 @@
+
+**Note: Below are the original instructions, the [project writeup is here](WRITEUP.md).**
+
+----
+
 # Object Detection in an Urban Environment
 
 ## Data
