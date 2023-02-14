@@ -29,11 +29,15 @@ Get acquainted with training neural networks and the toolchain and achieve some 
 
 ## Set up
 
+### Python requirements.txt
+
+The complete [requirements.txt](./build/requirements.txt) has been generated with ```pip freeze``` and can be found in the build folder.
+
 ### Basic setup
 
 - Fork and then clone repository from https://github.com/lightblu/nd013-c1-vision-starter
 
-- Beyond this not much is needed as due to lack of a proper GPU, the provided VM workspaces is used, which has most of the data.
+- Beyond this not much is needed as due to lack of a proper GPU, the provided VM workspaces is used, which has most of the data. However, the original build folder with a Dockerfile can be found at: https://github.com/udacity/nd013-c1-vision-starter/tree/main/build
 
 - For step two download pretrained model (262M uncompressed in the end!)
 
