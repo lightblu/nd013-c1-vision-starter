@@ -33,7 +33,7 @@ Get acquainted with training neural networks and the toolchain and achieve some 
 
 ### Python requirements.txt
 
-The complete [requirements.txt](./build/requirements.txt) has been generated with ```pip freeze``` and can be found in the build folder.
+The complete [requirements.txt](./build/requirements.txt) has been generated with ```pip freeze``` and can be found in the build folder. These can be installed with ```pip install -r requirements.txt```.
 
 ### Basic setup
 
@@ -67,7 +67,7 @@ Due to those VMs crashing or being recreated after shutting down, the reguluar r
      sudo apt-get update
      sudo apt-get install chromium-browser 
      
-Unfortunately, crashing or refreshing VMs became such a common task, that this even needed to go [into its own setup script](./vmsetup.sh). 
+Unfortunately, crashing or refreshing VMs became such a common task, that this even needed to go [into its own setup script](./build/vmsetup.sh).
 
 ### Launch jupyter notebook
 
