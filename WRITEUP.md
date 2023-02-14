@@ -2,6 +2,8 @@
 
 ## Project overview: 
 
+The github repository of this submissions is  https://github.com/lightblu/nd013-c1-vision-starter (main branch).
+
 ### Introduction: For what do we need object detection?
 
 Object detection is a critical component of self-driving car systems because it allows the car to detect and track objects in its environment, such as pedestrians, other vehicles, and obstacles. 
@@ -168,6 +170,7 @@ Metric | Value
  Loss/regularization_loss: | 107.768509
  Loss/total_loss: | 109.679489
 
+ The inflating loss is indication of the model overfitting quite quickly. This will be tried to handle by using augmentations and a different optimzier in the next experiments.
 
 ### Improve on the reference: experiment1
 
@@ -306,3 +309,25 @@ Run the scripts as given:
 **Truncated animation due to github file size limits**
 
 It is amazing to see a better result than expected from the precision numbers, though it is also apparent that the classifier has its problem with some objects, and especially smaller objects (which the numbers also already said), and as already seen in the data exploration, the test video also lacks other classes.
+
+### Continued: experiment2
+
+It was only late realized that also evaluation plots over time (and not only with a single final point) shall also be created. However, due to the size constraints (dataset, pretrained model and base installation already summing up to 1 gigabyte, tfevent files growing by another 150M every 1000 steps, and checkpoints also taking up 250M), and evaluation not being able to run at the same time due to OOM errors like this
+
+
+    2023-02-14 14:52:19.641249: W tensorflow/core/framework/op_kernel.cc:1767] OP_REQUIRES failed at cwise_ops_common.h:312 : Resource exhausted: OOM when allocating tensor with shape[3,3,128,128] and type float on /job:localhost/replica:0/task:0/device:GPU:0 by allocator GPU_0_bfc
+    2023-02-14 14:52:29.641549: W tensorflow/core/common_runtime/bfc_allocator.cc:431] Allocator (GPU_0_bfc) ran out of memory trying to allocate 1.00MiB (rounded to 1048576)requested by op conv4_block2_3_conv/kernel/Regularizer/Square
+
+Still at least some combined plots from checkpoints 6 to 10 could be achieved:
+
+![](pics/exp2_detboxes_precision13k.png)
+![](pics/exp2_detboxes_recall13k.png)
+![](pics/exp2_loss13k.png)
+**Mean average precision, recall, and loss after 13000 steps. Unfortunately the integrated dashboard and the VM browser interface made it somehow impossible to create this graphs with x axis descriptions. The graphs show a range from 8500 - 1300 steps.** 
+
+Also a downsized full animation was recreated:
+
+![](pics/animation_small.gif)
+**Test video animation with detection boxes at 13000 steps.**
+
+
