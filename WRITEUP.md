@@ -320,14 +320,14 @@ It was only late realized that also evaluation plots over time (and not only wit
 
 Still at least some combined plots from checkpoints 6 to 10 could be achieved:
 
-![](pics/exp2_detboxes_precision13k.png)
-![](pics/exp2_detboxes_recall13k.png)
-![](pics/exp2_loss13k.png)
+![](./pics/exp2_detboxes_precision13k.png)
+![](./pics/exp2_detboxes_recall13k.png)
+![](./pics/exp2_loss13k.png)
 **Mean average precision, recall, and loss after 13000 steps. Unfortunately the integrated dashboard and the VM browser interface made it somehow impossible to create this graphs with x axis descriptions. The graphs show a range from 8500 - 1300 steps.** 
 
 Also a downsized full animation was recreated:
 
-![](pics/animation_small.gif)
+![](./pics/animation_small.gif)
 **Test video animation with detection boxes at 13000 steps.**
 
 
